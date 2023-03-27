@@ -1,0 +1,16 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: github-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/enpgit/prop_test.git
+          clone-on-start: true
+          basedir: file://c:/tmp/git-c
+          #username - login если используетм приватный репозиторий
+          #password - token
+          default-label: main
+
